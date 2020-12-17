@@ -21,9 +21,27 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM SETUP ////////////////////////////
         ////////////////////////////////////////////////////////////
-        
-        
+        // TODO 1: Declare our variables //
+        var circle;			
+        var circles = [];	
 
+        function drawCircle(){
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+    physikz.addRandomVelocity(circle, canvas);
+    view.addChild(circle);
+    circles.push(circle);
+        }
+           // TODO 3 / 7 : Call the drawCircle() function 
+
+        /* Your Function Calls HERE */
+        drawCircle(1);
+        drawCircle(2);
+        drawCircle(3);
+        drawCircle(4);
+        drawCircle(5);
+      for (var i = 1 ;i <= 5 ;i++ ){
+          drawcircle(i);
+      }
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -36,8 +54,15 @@ var init = function (window) {
         */
         function update() {
             
-           
+           physikz.updatePosition[circle];
+           physikz.updatePosition[circle];
+           physikz.updatePosition[circle];
+           physikz.updatePosition[circle];
+           physikz.updatePosition[circle];
             
+           for ( ; ; ){
+               
+           } 
         }
     
         /* 
