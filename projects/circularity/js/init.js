@@ -27,21 +27,18 @@ var init = function (window) {
 
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-    physikz.addRandomVelocity(circle, canvas);
+    physikz.addRandomVelocity(circle, canvas, 10, 10);
     view.addChild(circle);
     circles.push(circle);
         }
            // TODO 3 / 7 : Call the drawCircle() function 
 
         /* Your Function Calls HERE */
-        drawCircle(1);
-        drawCircle(2);
-        drawCircle(3);
-        drawCircle(4);
-        drawCircle(5);
-      for (var i = 1 ;i <= 5 ;i++ ){
-          drawcircle(i);
-      }
+        
+      for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
+    drawCircle(loopsCompleted);
+}
+      
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -54,17 +51,14 @@ var init = function (window) {
         */
         function update() {
             
-           physikz.updatePosition[circle];
-           physikz.updatePosition[circle];
-           physikz.updatePosition[circle];
-           physikz.updatePosition[circle];
-           physikz.updatePosition[circle];
-            
-           for ( ; ; ){
-               
+          
+           for (var i = 0; i < circle.length; i++) {
+    var eachValue = circle[i];
+    
+           
            } 
         }
-    
+    physikz.updatePosition(eachCircle)
         /* 
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
@@ -78,7 +72,8 @@ var init = function (window) {
             }
             
         }
-        
+       
+        game.checkCirclePosition(eachCircle)
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
