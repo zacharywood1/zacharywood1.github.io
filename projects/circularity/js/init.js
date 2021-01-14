@@ -34,11 +34,10 @@ var init = function (window) {
            // TODO 3 / 7 : Call the drawCircle() function 
 
         /* Your Function Calls HERE */
-        
-      for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
+         physikz.updatePosition(eachCircle);
+        for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
     drawCircle(loopsCompleted);
 }
-      
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
@@ -55,10 +54,12 @@ var init = function (window) {
            for (var i = 0; i < circle.length; i++) {
     var eachValue = circle[i];
     
-           
+            for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
+    drawCircle(loopsCompleted);
+}
            } 
         }
-    physikz.updatePosition(eachCircle)
+   
         /* 
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
@@ -70,7 +71,7 @@ var init = function (window) {
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-            
+            /// TODO 5 starts here ////
         }
        
         game.checkCirclePosition(eachCircle)
